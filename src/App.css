@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css?family=Google+Sans|Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --blue: #2584fc;
+}
+
+.header {
+  font-family: "Google Sans", "Roboto", "RobotoDraft", "Helvetica", "Arial",
+    sans-serif;
+  font-stretch: 100%;
+  color: #1f1f1f;
+  background-color: #f8fbfd;
+}
+
+.menu {
+  font-size: 14px;
+  color: #202124;
+}
