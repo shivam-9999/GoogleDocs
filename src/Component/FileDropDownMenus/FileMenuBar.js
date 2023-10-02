@@ -17,18 +17,17 @@ import { BiTrash, BiSolidPrinter } from "react-icons/bi";
 import { RiUserSharedLine } from "react-icons/ri";
 import { GoDownload } from "react-icons/go";
 import FileNestedMenu from "./FileNestedMenu";
-import ShareNestedMenu from "../ShareDropDownMenu/ShareNestedMenu";
 
 function FileMenuBar({
   handleMouseEnter,
   handleMouseLeave,
-  isFileOpen,
-  isFileNestedOpen,
+  isOpen,
+  isNestedOpen,
 }) {
   return (
     <div>
       {" "}
-      {isFileOpen && (
+      {isOpen && (
         <div className="origin-top-right  absolute w-56 rounded-md shadow-lg bg-white shadow-slate-300">
           <div
             className="py-1 relative"
@@ -50,7 +49,7 @@ function FileMenuBar({
                   File
                 </div>
                 {/* Nested Dropdown  */}
-                <FileNestedMenu isFileNestedOpen={isFileNestedOpen} />
+                <FileNestedMenu isNestedOpen={isNestedOpen} />
               </div>
             </a>
             {/*Dropdown :- Open bar */}
@@ -88,12 +87,10 @@ function FileMenuBar({
               <div className="flex gap-2 items-center ">
                 <RiUserSharedLine className="text-base" />
                 <span className="text-sm ">Share </span>
-                {/* Nested Dropdown  */}
-                <ShareNestedMenu isFileNestedOpen={isFileNestedOpen} />
               </div>
             </a>
-
             {/* File Dropdown :- Email  */}
+
             <a
               // href="#"
               className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"

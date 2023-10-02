@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { RiFolderTransferLine } from "react-icons/ri";
 import { BsCloudCheck } from "react-icons/bs";
-import FileMenu from "./FileDropDownMenus/FileMenu";
+import FileMenu from "./FileMenu";
 
 function TitleNdMenus() {
   return (

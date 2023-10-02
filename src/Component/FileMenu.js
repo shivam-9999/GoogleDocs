@@ -5,45 +5,33 @@ import { MdOutlineFileCopy } from "react-icons/md";
 import FileMenuBar from "./FileDropDownMenus/FileMenuBar";
 
 function FileMenu() {
-  const [isFileOpen, setisFileOpen] = useState(false);
-  const [isFileNestedOpen, setisFileNestedOpen] = useState(false);
-  const [isshareOpen, setisshareOpen] = useState(false);
-  const [isshareNestedOpen, setisshareNestedOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isNestedOpen, setisNestedOpen] = useState(false);
 
-  //File DropDown function
-  const toggleFileDropdown = useCallback(() => {
-    setisFileOpen((prevIsOpen) => !prevIsOpen);
+  const toggleDropdown = useCallback(() => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   }, []);
 
-  const toggleFileNestedDropdown = useCallback(() => {
-    setisFileNestedOpen((prevIsNestedOpen) => !prevIsNestedOpen);
-  }, []);
-
-  //Share DropDown function
-  const toggleShareDropdown = useCallback(() => {
-    setisshareOpen((prevIsOpen) => !prevIsOpen);
-  }, []);
-
-  const toggleShareNestedDropdown = useCallback(() => {
-    setisshareNestedOpen((prevIsNestedOpen) => !prevIsNestedOpen);
+  const toggleNestedDropdown = useCallback(() => {
+    setisNestedOpen((prevIsNestedOpen) => !prevIsNestedOpen);
   }, []);
 
   const handleMouseEnter = () => {
-    if (!isFileNestedOpen) {
-      toggleFileNestedDropdown();
+    if (!isNestedOpen) {
+      toggleNestedDropdown();
     }
   };
 
   const handleMouseLeave = () => {
-    if (isFileNestedOpen) {
-      toggleFileNestedDropdown();
+    if (isNestedOpen) {
+      toggleNestedDropdown();
     }
   };
 
   return (
     <div className="relative inline-block;">
       <button
-        onClick={toggleFileDropdown}
+        onClick={toggleDropdown}
         type="button"
         className="hover:bg-gray-200  rounded-sm px-2"
         id="options-menu"
@@ -54,10 +42,9 @@ function FileMenu() {
       <FileMenuBar
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        isFileOpen={isFileOpen}
-        isFileNestedOpen={isFileNestedOpen}
+        isOpen={isOpen}
+        isNestedOpen={isNestedOpen}
       />
-      {/* Share Dropdown */}
     </div>
   );
 }
