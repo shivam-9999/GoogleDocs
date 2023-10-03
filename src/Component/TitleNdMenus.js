@@ -101,6 +101,7 @@ function TitleNdMenus() {
   //toggleToolsDropdown
   const toggleHelpDropdown = () => {
     setIsHelpOpen(!isHelpOpen);
+    setIsExtensionsOpen(false);
     setIsToolsOpen(false);
     setIsInsertOpen(false);
     setIsFileOpen(false);

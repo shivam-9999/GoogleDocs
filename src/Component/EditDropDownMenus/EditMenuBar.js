@@ -19,17 +19,16 @@ function EditMenuBar({
       {" "}
       {isEditOpen && (
         <div className="origin-top-right  absolute w-80 rounded-md shadow-lg bg-white shadow-slate-300">
-          <div
+          <ul
             className="py-1 relative"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"
           >
             {/*Dropdown :- Undo bar */}
-            <a
+            <li
               onMouseEnter={handleEditMouseEnter}
               onMouseLeave={handleEditMouseLeave}
-              // href="#"
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -46,10 +45,10 @@ function EditMenuBar({
                 {/* Nested Dropdown  */}
               </div>
               <EditNestedMenu isEditNestedOpen={isEditNestedOpen} />
-            </a>
+            </li>
 
             {/*Dropdown :- Redo bar */}
-            <a
+            <li
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -59,10 +58,10 @@ function EditMenuBar({
                   <span className="text-sm font-medium">Redo</span>
                 </div>
               </div>
-            </a>
+            </li>
             <hr className="my-2 border-gray-200"></hr>
             {/*Dropdown :- Cut bar */}
-            <a
+            <li
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -72,9 +71,9 @@ function EditMenuBar({
                   <span className="text-sm font-medium">Cut</span>
                 </div>
               </div>
-            </a>
+            </li>
             {/*Dropdown :- Copy bar */}
-            <a
+            <li
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -84,9 +83,9 @@ function EditMenuBar({
                   <span className="text-sm font-medium">Copy</span>
                 </div>
               </div>
-            </a>
+            </li>
             {/*Dropdown :- Paste bar */}
-            <a
+            <li
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -96,9 +95,9 @@ function EditMenuBar({
                   <span className="text-sm font-medium">Paste</span>
                 </div>
               </div>
-            </a>
+            </li>
             {/*Dropdown :- Paste without formatting - bar */}
-            <a
+            <li
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -110,10 +109,10 @@ function EditMenuBar({
                   </span>
                 </div>
               </div>
-            </a>
+            </li>
             <hr className="my-2 border-gray-200"></hr>
             {/*Dropdown :- Select all */}
-            <a
+            <li
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -123,9 +122,9 @@ function EditMenuBar({
                   <span className="text-sm font-medium">Select all</span>
                 </div>
               </div>
-            </a>
+            </li>
             {/*Dropdown :- delete */}
-            <a
+            <li
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -135,10 +134,10 @@ function EditMenuBar({
                   <span className="text-sm font-medium">delete</span>
                 </div>
               </div>
-            </a>
+            </li>
             <hr className="my-2 border-gray-200"></hr>
             {/*Dropdown :- Find and Replace */}
-            <a
+            <li
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -148,8 +147,8 @@ function EditMenuBar({
                   <span className="text-sm font-medium">Find and Replace</span>
                 </div>
               </div>
-            </a>
-          </div>
+            </li>
+          </ul>
         </div>
       )}
     </div>

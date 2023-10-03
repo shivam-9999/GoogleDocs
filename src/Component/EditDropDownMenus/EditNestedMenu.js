@@ -11,14 +11,13 @@ function EditNestedMenu({ isEditNestedOpen }) {
           className="absolute top-2  w-56 rounded-md shadow-lg bg-white shadow-slate-300"
           style={{ left: "100%" }}
         >
-          <div
+          <ul
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"
           >
             {/*NestedDropdown :- Document*/}
-            <a
-              // href="#"
+            <li
               className="block   px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -26,10 +25,9 @@ function EditNestedMenu({ isEditNestedOpen }) {
                 <BsFillFileTextFill className="text-base text-blue-500" />
                 <div>Document</div>
               </div>
-            </a>
+            </li>
             {/*NestedDropdown :- From template gallery*/}
-            <a
-              // href="#"
+            <li
               className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -37,8 +35,8 @@ function EditNestedMenu({ isEditNestedOpen }) {
                 <BiPaint className="text-base" />
                 <div>From template gallery</div>
               </div>
-            </a>
-          </div>
+            </li>
+          </ul>
         </div>
       )}
     </div>

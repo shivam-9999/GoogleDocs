@@ -14,7 +14,6 @@ function EmailNestedMenu({ isEmailNestedOpen }) {
             aria-labelledby="options-menu"
           >
             <a
-              // href="#"
               className="block   px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -24,7 +23,6 @@ function EmailNestedMenu({ isEmailNestedOpen }) {
             </a>
 
             <a
-              // href="#"
               className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -33,7 +31,6 @@ function EmailNestedMenu({ isEmailNestedOpen }) {
               </div>
             </a>
             <a
-              // href="#"
               className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >

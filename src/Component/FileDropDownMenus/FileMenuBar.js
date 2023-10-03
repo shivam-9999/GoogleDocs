@@ -45,17 +45,16 @@ function FileMenuBar({
       {" "}
       {isFileOpen && (
         <div className="origin-top-right  absolute w-80 rounded-md shadow-lg bg-white shadow-slate-300">
-          <div
+          <ul
             className="py-1 relative"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"
           >
             {/*Dropdown :- New bar */}
-            <a
+            <li
               onMouseEnter={handleFileMouseEnter}
               onMouseLeave={handleFileMouseLeave}
-              // href="#"
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -72,10 +71,9 @@ function FileMenuBar({
                 {/* Nested Dropdown  */}
               </div>
               <FileNestedMenu isFileNestedOpen={isFileNestedOpen} />
-            </a>
+            </li>
             {/*Dropdown :- Open bar */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -85,10 +83,9 @@ function FileMenuBar({
                   <span className="text-sm ">Open </span>
                 </div>
               </div>
-            </a>
+            </li>
             {/* Dropdown :- Make a copy  */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm  text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -96,14 +93,13 @@ function FileMenuBar({
                 <MdOutlineFileCopy className="text-base" />
                 <span className="text-sm ">Make a copy </span>
               </div>
-            </a>
+            </li>
 
             <hr className="my-2 border-gray-200"></hr>
             {/* File Dropdown :- Share  */}
-            <a
+            <li
               onMouseEnter={handleShareMouseEnter}
               onMouseLeave={handleShareMouseLeave}
-              // href="#"
               className="block relative px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -119,12 +115,11 @@ function FileMenuBar({
                 {/* Nested Dropdown  */}
               </div>
               <ShareNestedMenu isShareNestedOpen={isShareNestedOpen} />
-            </a>
+            </li>
             {/* File Dropdown :- Email  */}
-            <a
+            <li
               onMouseEnter={handleEmailMouseEnter}
               onMouseLeave={handleEmailMouseLeave}
-              // href="#"
               className="block  relative px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -140,12 +135,11 @@ function FileMenuBar({
                 {/* Nested Dropdown  */}
               </div>
               <EmailNestedMenu isEmailNestedOpen={isEmailNestedOpen} />
-            </a>
+            </li>
             {/* File Dropdown :- Downloads  */}
-            <a
+            <li
               onMouseEnter={handleDownloadMouseEnter}
               onMouseLeave={handleDownloadMouseLeave}
-              // href="#"
               className="block relative px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -162,11 +156,10 @@ function FileMenuBar({
                 {/* Nested Dropdown  */}
               </div>
               <DownloadNestedMenu isDownloadNestedOpen={isDownloadNestedOpen} />
-            </a>
+            </li>
             <hr className="my-2 border-gray-200"></hr>
             {/* File Dropdown :- Rename  */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -174,10 +167,9 @@ function FileMenuBar({
                 <MdOutlineDriveFileRenameOutline className="text-base" />
                 <span className="text-sm ">Rename </span>
               </div>
-            </a>
+            </li>
             {/* File Dropdown :- Move To Bin  */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -185,11 +177,10 @@ function FileMenuBar({
                 <BiTrash className="text-base" />
                 <span className="text-sm ">Move To Bin </span>
               </div>
-            </a>
+            </li>
             <hr className="my-2 border-gray-200"></hr>
             {/* File Dropdown :- Version History  */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -197,10 +188,9 @@ function FileMenuBar({
                 <MdHistory className="text-base" />
                 <span className="text-sm ">Version History </span>
               </div>
-            </a>
+            </li>
             {/* File Dropdown :- Make Availble Offile  */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -208,11 +198,10 @@ function FileMenuBar({
                 <MdOutlineOfflinePin className="text-base" />
                 <span className="text-sm ">Make Availble Offile </span>
               </div>
-            </a>
+            </li>
             <hr className="my-2 border-gray-200"></hr>
             {/* File Dropdown :- Details  */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -220,10 +209,9 @@ function FileMenuBar({
                 <MdDetails className="text-base" />
                 <span className="text-sm ">Details </span>
               </div>
-            </a>
+            </li>
             {/* File Dropdown :- Language  */}
-            <a
-              // href="#"
+            <li
               onMouseEnter={handleLanguagesMouseEnter}
               onMouseLeave={handleLanguagesMouseLeave}
               className="block relative  px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
@@ -242,21 +230,19 @@ function FileMenuBar({
               <LanguagesNestedMenu
                 isLanguagesNestedOpen={isLanguagesNestedOpen}
               />
-            </a>
+            </li>
             {/* File Dropdown :- Page Setup  */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
-                <AiOutlineFileText className="text-base" />
+                <liiOutlineFileText className="text-base" />
                 <span className="text-sm ">Page Setup </span>
               </div>
-            </a>
+            </li>
             {/* File Dropdown :- Print  */}
-            <a
-              // href="#"
+            <li
               className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
@@ -264,8 +250,8 @@ function FileMenuBar({
                 <BiSolidPrinter className="text-base" />
                 <span className="text-sm ">Print </span>
               </div>
-            </a>
-          </div>
+            </li>
+          </ul>
         </div>
       )}
     </div>

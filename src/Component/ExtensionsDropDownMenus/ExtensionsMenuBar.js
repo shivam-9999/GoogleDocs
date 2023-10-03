@@ -20,18 +20,17 @@ function ExtensionsMenuBar({
             aria-orientation="vertical"
             aria-labelledby="options-menu"
           >
-            {/*Dropdown :- New bar */}
+            {/*Dropdown :- Add ones */}
             <a
               onMouseEnter={handleExtensionsMouseEnter}
               onMouseLeave={handleExtensionsMouseLeave}
-              // href="#"
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 justify-between items-center ">
                 <div className="flex  gap-2">
                   {/* <BsFillExtensionsTextFill className="text-base" /> */}
-                  <span className="text-sm ">New</span>
+                  <span className="text-sm ">Add ones</span>
                 </div>
                 <BiSolidRightArrow
                   className="text-gray-400"
@@ -43,6 +42,18 @@ function ExtensionsMenuBar({
               <ExtensionsNestedMenu
                 isExtensionsNestedOpen={isExtensionsNestedOpen}
               />
+            </a>
+            {/*Dropdown :- Add Script */}
+            <a
+              className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
+              role="menuitem"
+            >
+              <div className="flex gap-2 justify-between items-center ">
+                <div className="flex  gap-2">
+                  {/* <BsFillExtensionsTextFill className="text-base" /> */}
+                  <span className="text-sm ">Add Script</span>
+                </div>
+              </div>
             </a>
           </div>
         </div>
