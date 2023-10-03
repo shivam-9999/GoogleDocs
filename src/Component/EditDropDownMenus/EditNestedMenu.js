@@ -2,11 +2,11 @@ import React from "react";
 import { BsFillFileTextFill } from "react-icons/bs";
 import { BiPaint } from "react-icons/bi";
 
-function FileNestedMenu({ isFileNestedOpen }) {
+function EditNestedMenu({ isEditNestedOpen }) {
   return (
     <div>
       {" "}
-      {isFileNestedOpen && (
+      {isEditNestedOpen && (
         <div
           className="absolute top-2  w-56 rounded-md shadow-lg bg-white shadow-slate-300"
           style={{ left: "100%" }}
@@ -45,4 +45,4 @@ function FileNestedMenu({ isFileNestedOpen }) {
   );
 }
 
-export default FileNestedMenu;
+export default EditNestedMenu;

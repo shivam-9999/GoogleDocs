@@ -13,22 +13,38 @@ import {
 
 import { AiOutlineFileText } from "react-icons/ai";
 
-import { BiTrash, BiSolidPrinter } from "react-icons/bi";
+import { BiTrash, BiSolidPrinter, BiSolidRightArrow } from "react-icons/bi";
 import { RiUserSharedLine } from "react-icons/ri";
 import { GoDownload } from "react-icons/go";
 import FileNestedMenu from "./FileNestedMenu";
+import ShareNestedMenu from "./ShareNestedMenu";
+import EmailNestedMenu from "./EmailNestedMenu";
+import DownloadNestedMenu from "./DownloadNestedMenu";
+import LanguagesNestedMenu from "./LanguagesNestedMenu";
 
 function FileMenuBar({
-  handleMouseEnter,
-  handleMouseLeave,
-  isOpen,
-  isNestedOpen,
+  isFileOpen,
+  isFileNestedOpen,
+  isShareNestedOpen,
+  isEmailNestedOpen,
+  isDownloadNestedOpen,
+  isLanguagesNestedOpen,
+  handleFileMouseEnter,
+  handleFileMouseLeave,
+  handleShareMouseEnter,
+  handleShareMouseLeave,
+  handleEmailMouseEnter,
+  handleEmailMouseLeave,
+  handleDownloadMouseEnter,
+  handleDownloadMouseLeave,
+  handleLanguagesMouseEnter,
+  handleLanguagesMouseLeave,
 }) {
   return (
     <div>
       {" "}
-      {isOpen && (
-        <div className="origin-top-right  absolute w-56 rounded-md shadow-lg bg-white shadow-slate-300">
+      {isFileOpen && (
+        <div className="origin-top-right  absolute w-80 rounded-md shadow-lg bg-white shadow-slate-300">
           <div
             className="py-1 relative"
             role="menu"
@@ -37,37 +53,43 @@ function FileMenuBar({
           >
             {/*Dropdown :- New bar */}
             <a
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={handleFileMouseEnter}
+              onMouseLeave={handleFileMouseLeave}
               // href="#"
-              className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
+              className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
-              <div className="flex gap-2 items-center ">
-                <BsFillFileTextFill className="text-base" />
-                <div className="px-2" id="options-nested-menu">
-                  File
+              <div className="flex gap-2 justify-between items-center ">
+                <div className="flex  gap-2">
+                  <BsFillFileTextFill className="text-base" />
+                  <span className="text-sm ">New</span>
                 </div>
+                <BiSolidRightArrow
+                  className="text-gray-400"
+                  style={{ fontSize: "10px" }}
+                />
+
                 {/* Nested Dropdown  */}
-                <FileNestedMenu isNestedOpen={isNestedOpen} />
               </div>
+              <FileNestedMenu isFileNestedOpen={isFileNestedOpen} />
             </a>
             {/*Dropdown :- Open bar */}
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800  hover:bg-gray-100"
+              className="block px-3 py-1 text-sm text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
-              <div className="flex gap-2 items-center ">
-                <IoMdFolderOpen className="text-base" />
-                <span className="text-sm ">Open </span>
+              <div className="flex gap-2 justify-between items-center ">
+                <div className="flex  gap-2">
+                  <IoMdFolderOpen className="text-base" />
+                  <span className="text-sm ">Open </span>
+                </div>
               </div>
             </a>
-
             {/* Dropdown :- Make a copy  */}
             <a
               // href="#"
-              className="block px-3 py-2 text-sm  text-gray-800 hover:bg-gray-100"
+              className="block px-3 py-1 text-sm  text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
@@ -75,63 +97,88 @@ function FileMenuBar({
                 <span className="text-sm ">Make a copy </span>
               </div>
             </a>
-            <div className="divide-y " />
-            <hr class="my-2 border-gray-200"></hr>
-            {/* File Dropdown :- Share  */}
 
+            <hr className="my-2 border-gray-200"></hr>
+            {/* File Dropdown :- Share  */}
             <a
+              onMouseEnter={handleShareMouseEnter}
+              onMouseLeave={handleShareMouseLeave}
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block relative px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
-              <div className="flex gap-2 items-center ">
-                <RiUserSharedLine className="text-base" />
-                <span className="text-sm ">Share </span>
+              <div className="flex gap-2 justify-between items-center ">
+                <div className="flex  gap-2">
+                  <RiUserSharedLine className="text-base" />
+                  <span className="text-sm ">Share </span>
+                </div>
+                <BiSolidRightArrow
+                  className="text-gray-400"
+                  style={{ fontSize: "10px" }}
+                />
+                {/* Nested Dropdown  */}
               </div>
+              <ShareNestedMenu isShareNestedOpen={isShareNestedOpen} />
             </a>
             {/* File Dropdown :- Email  */}
-
             <a
+              onMouseEnter={handleEmailMouseEnter}
+              onMouseLeave={handleEmailMouseLeave}
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block  relative px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
-              <div className="flex gap-2 items-center ">
-                <MdOutlineEmail className="text-base" />
-                <span className="text-sm ">Email </span>
+              <div className="flex gap-2 justify-between items-center ">
+                <div className="flex  gap-2">
+                  <MdOutlineEmail className="text-base" />
+                  <span className="text-sm ">Email </span>
+                </div>
+                <BiSolidRightArrow
+                  className="text-gray-400"
+                  style={{ fontSize: "10px" }}
+                />
+                {/* Nested Dropdown  */}
               </div>
+              <EmailNestedMenu isEmailNestedOpen={isEmailNestedOpen} />
             </a>
             {/* File Dropdown :- Downloads  */}
-
             <a
+              onMouseEnter={handleDownloadMouseEnter}
+              onMouseLeave={handleDownloadMouseLeave}
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block relative px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
-              <div className="flex gap-2 items-center ">
-                <GoDownload className="text-base" />
-                <span className="text-sm ">Downloads </span>
+              <div className="flex gap-2 justify-between items-center ">
+                <div className="flex  gap-2">
+                  <GoDownload className="text-base" />
+                  <span className="text-sm ">Downloads </span>
+                </div>
+                <BiSolidRightArrow
+                  className="text-gray-400"
+                  style={{ fontSize: "10px" }}
+                />
+
+                {/* Nested Dropdown  */}
               </div>
+              <DownloadNestedMenu isDownloadNestedOpen={isDownloadNestedOpen} />
             </a>
-            <hr class="my-2 border-gray-200"></hr>
-
+            <hr className="my-2 border-gray-200"></hr>
             {/* File Dropdown :- Rename  */}
-
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
-              <div className="flex gap-2 items-center ">
+              <div className="flex gap-2  items-center ">
                 <MdOutlineDriveFileRenameOutline className="text-base" />
                 <span className="text-sm ">Rename </span>
               </div>
             </a>
             {/* File Dropdown :- Move To Bin  */}
-
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
@@ -139,14 +186,11 @@ function FileMenuBar({
                 <span className="text-sm ">Move To Bin </span>
               </div>
             </a>
-
-            <hr class="my-2 border-gray-200"></hr>
-
+            <hr className="my-2 border-gray-200"></hr>
             {/* File Dropdown :- Version History  */}
-
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
@@ -155,10 +199,9 @@ function FileMenuBar({
               </div>
             </a>
             {/* File Dropdown :- Make Availble Offile  */}
-
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
@@ -166,12 +209,11 @@ function FileMenuBar({
                 <span className="text-sm ">Make Availble Offile </span>
               </div>
             </a>
-            <hr class="my-2 border-gray-200"></hr>
+            <hr className="my-2 border-gray-200"></hr>
             {/* File Dropdown :- Details  */}
-
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
@@ -179,25 +221,32 @@ function FileMenuBar({
                 <span className="text-sm ">Details </span>
               </div>
             </a>
-
             {/* File Dropdown :- Language  */}
-
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              onMouseEnter={handleLanguagesMouseEnter}
+              onMouseLeave={handleLanguagesMouseLeave}
+              className="block relative  px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
-              <div className="flex gap-2 items-center ">
-                <MdOutlineLanguage className="text-base" />
-                <span className="text-sm ">Language </span>
+              <div className="flex gap-2 justify-between items-center ">
+                <div className="flex  gap-2">
+                  <MdOutlineLanguage className="text-base" />
+                  <span className="text-sm ">Language </span>
+                </div>
+                <BiSolidRightArrow
+                  className="text-gray-400"
+                  style={{ fontSize: "10px" }}
+                />
               </div>
+              <LanguagesNestedMenu
+                isLanguagesNestedOpen={isLanguagesNestedOpen}
+              />
             </a>
-
             {/* File Dropdown :- Page Setup  */}
-
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
@@ -206,10 +255,9 @@ function FileMenuBar({
               </div>
             </a>
             {/* File Dropdown :- Print  */}
-
             <a
               // href="#"
-              className="block px-3 py-2 text-sm text-gray-800 hover:bg-gray-100"
+              className="block px-3 py-1 text-sm text-gray-800 hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">

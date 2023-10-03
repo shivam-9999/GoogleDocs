@@ -1,10 +1,9 @@
 import React from "react";
-import { BsFillFileTextFill } from "react-icons/bs";
 
-function ShareNestedMenu({ isNestedOpen }) {
+function EmailNestedMenu({ isEmailNestedOpen }) {
   return (
     <div>
-      {isNestedOpen && (
+      {isEmailNestedOpen && (
         <div
           className="absolute top-2  w-56 rounded-md shadow-lg bg-white shadow-slate-300"
           style={{ left: "100%" }}
@@ -14,26 +13,32 @@ function ShareNestedMenu({ isNestedOpen }) {
             aria-orientation="vertical"
             aria-labelledby="options-menu"
           >
-            {/*NestedDropdown :- Document*/}
             <a
               // href="#"
               className="block   px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center  ">
-                <BsFillFileTextFill className="text-base" />
-                <div>Document</div>
+                <div>Email This File</div>
               </div>
             </a>
-            {/*NestedDropdown :- From template gallery*/}
+
             <a
               // href="#"
               className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
-                <BsFillFileTextFill className="text-base" />
-                <div>From template gallery</div>
+                <div>Email Collaborators</div>
+              </div>
+            </a>
+            <a
+              // href="#"
+              className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
+              role="menuitem"
+            >
+              <div className="flex gap-2 items-center ">
+                <div>Email Drafts</div>
               </div>
             </a>
           </div>
@@ -43,4 +48,4 @@ function ShareNestedMenu({ isNestedOpen }) {
   );
 }
 
-export default ShareNestedMenu;
+export default EmailNestedMenu;

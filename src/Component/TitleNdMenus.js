@@ -3,8 +3,122 @@ import { AiOutlineStar } from "react-icons/ai";
 import { RiFolderTransferLine } from "react-icons/ri";
 import { BsCloudCheck } from "react-icons/bs";
 import FileMenu from "./FileMenu";
+import EditMenu from "./EditMenu";
+import ViewMenu from "./ViewMenu";
+import InsertMenu from "./InsertMenu";
+import FormatMenu from "./FormatMenu";
+import ToolsMenu from "./ToolsMenu";
+import HelpMenu from "./HelpMenu";
+import ExtensionsMenu from "./ExtensionsMenu";
 
 function TitleNdMenus() {
+  const [isFileOpen, setIsFileOpen] = useState(false);
+  const [isEditOpen, setIsEditOpen] = useState(false);
+  const [isViewOpen, setIsViewOpen] = useState(false);
+  const [isInsertOpen, setIsInsertOpen] = useState(false);
+  const [isFormatOpen, setIsFormatOpen] = useState(false);
+  const [isToolsOpen, setIsToolsOpen] = useState(false);
+  const [isExtensionsOpen, setIsExtensionsOpen] = useState(false);
+  const [isHelpOpen, setIsHelpOpen] = useState(false);
+
+  // toggleHelpDropdown
+  const toggleFileDropdown = () => {
+    setIsFileOpen(!isFileOpen);
+    setIsEditOpen(false); // Close the Edit menu when clicking on File
+    setIsViewOpen(false);
+    setIsInsertOpen(false);
+    setIsFormatOpen(false);
+    setIsToolsOpen(false);
+    setIsExtensionsOpen(false);
+    setIsHelpOpen(false);
+  };
+  //toggleEditDropdown
+  const toggleEditDropdown = () => {
+    setIsEditOpen(!isEditOpen);
+    setIsFileOpen(false); // Close the File menu when clicking on Edit
+    setIsViewOpen(false);
+    setIsInsertOpen(false);
+    setIsFormatOpen(false);
+    setIsToolsOpen(false);
+    setIsExtensionsOpen(false);
+    setIsHelpOpen(false);
+  };
+  //toggleViewDropdown
+  const toggleViewDropdown = () => {
+    setIsViewOpen(!isViewOpen);
+    setIsEditOpen(false);
+    setIsFileOpen(false);
+    setIsInsertOpen(false);
+    setIsFormatOpen(false);
+    setIsToolsOpen(false);
+    setIsExtensionsOpen(false);
+    setIsHelpOpen(false);
+  };
+  //toggleInsertDropdown
+  const toggleInsertDropdown = () => {
+    setIsInsertOpen(!isInsertOpen);
+    setIsFileOpen(false);
+    setIsEditOpen(false);
+    setIsViewOpen(false);
+    setIsFormatOpen(false);
+    setIsToolsOpen(false);
+    setIsExtensionsOpen(false);
+    setIsHelpOpen(false);
+  };
+  //toggleFormatDropdown
+  const toggleFormatDropdown = () => {
+    setIsFormatOpen(!isFormatOpen);
+    setIsInsertOpen(false);
+    setIsFileOpen(false);
+    setIsEditOpen(false);
+    setIsViewOpen(false);
+    setIsToolsOpen(false);
+    setIsExtensionsOpen(false);
+    setIsHelpOpen(false);
+  };
+  //toggleToolsDropdown
+  const toggleToolsDropdown = () => {
+    setIsToolsOpen(!isToolsOpen);
+    setIsInsertOpen(false);
+    setIsFileOpen(false);
+    setIsEditOpen(false);
+    setIsViewOpen(false);
+    setIsFormatOpen(false);
+    setIsExtensionsOpen(false);
+    setIsHelpOpen(false);
+  };
+  //togglExtensionsDropdown
+  const toggleExtensionsDropdown = () => {
+    setIsExtensionsOpen(!isExtensionsOpen);
+    setIsToolsOpen(false);
+    setIsInsertOpen(false);
+    setIsFileOpen(false);
+    setIsEditOpen(false);
+    setIsViewOpen(false);
+    setIsFormatOpen(false);
+    setIsHelpOpen(false);
+  };
+  //toggleToolsDropdown
+  const toggleHelpDropdown = () => {
+    setIsHelpOpen(!isHelpOpen);
+    setIsToolsOpen(false);
+    setIsInsertOpen(false);
+    setIsFileOpen(false);
+    setIsEditOpen(false);
+    setIsViewOpen(false);
+    setIsFormatOpen(false);
+  };
+  //closeMenus
+  const closeMenus = () => {
+    setIsFileOpen(false);
+    setIsEditOpen(false);
+    setIsViewOpen(false);
+    setIsInsertOpen(false);
+    setIsToolsOpen(false);
+    setIsExtensionsOpen(false);
+    setIsHelpOpen(false);
+  };
+
   return (
     <div>
       {" "}
@@ -23,16 +137,43 @@ function TitleNdMenus() {
         </div>
 
         {/* menu */}
-        <div className="menu flex gap-4 ml-1 font-medium">
+        <div
+          className="menu flex gap-0 ml-1 font-medium "
+          onMouseLeave={closeMenus}
+        >
           {/* File  */}
-          <FileMenu />
-          <div>Edit</div>
-          <div>View</div>
-          <div>Insert</div>
-          <div>Format</div>
-          <div>Tools</div>
-          <div>Extensions</div>
-          <div>Help</div>
+          <FileMenu
+            toggleFileDropdown={toggleFileDropdown}
+            isFileOpen={isFileOpen}
+          />
+          <EditMenu
+            toggleEditDropdown={toggleEditDropdown}
+            isEditOpen={isEditOpen}
+          />
+          <ViewMenu
+            toggleViewDropdown={toggleViewDropdown}
+            isViewOpen={isViewOpen}
+          />
+          <InsertMenu
+            toggleInsertDropdown={toggleInsertDropdown}
+            isInsertOpen={isInsertOpen}
+          />
+          <FormatMenu
+            toggleFormatDropdown={toggleFormatDropdown}
+            isFormatOpen={isFormatOpen}
+          />
+          <ToolsMenu
+            toggleToolsDropdown={toggleToolsDropdown}
+            isToolsOpen={isToolsOpen}
+          />
+          <ExtensionsMenu
+            toggleExtensionsDropdown={toggleExtensionsDropdown}
+            isExtensionsOpen={isExtensionsOpen}
+          />
+          <HelpMenu
+            toggleHelpDropdown={toggleHelpDropdown}
+            isHelpOpen={isHelpOpen}
+          />
         </div>
       </div>
     </div>

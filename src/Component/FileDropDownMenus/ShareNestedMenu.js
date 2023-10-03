@@ -1,12 +1,11 @@
 import React from "react";
-import { BsFillFileTextFill } from "react-icons/bs";
-import { BiPaint } from "react-icons/bi";
+import { BsFillFileTextFill, BsGlobeAmericas } from "react-icons/bs";
+import { RiUserSharedLine } from "react-icons/ri";
 
-function FileNestedMenu({ isFileNestedOpen }) {
+function ShareNestedMenu({ isShareNestedOpen }) {
   return (
     <div>
-      {" "}
-      {isFileNestedOpen && (
+      {isShareNestedOpen && (
         <div
           className="absolute top-2  w-56 rounded-md shadow-lg bg-white shadow-slate-300"
           style={{ left: "100%" }}
@@ -23,8 +22,8 @@ function FileNestedMenu({ isFileNestedOpen }) {
               role="menuitem"
             >
               <div className="flex gap-2 items-center  ">
-                <BsFillFileTextFill className="text-base text-blue-500" />
-                <div>Document</div>
+                <RiUserSharedLine className="text-base" />
+                <span className="text-sm ">Share With Others</span>
               </div>
             </a>
             {/*NestedDropdown :- From template gallery*/}
@@ -34,8 +33,8 @@ function FileNestedMenu({ isFileNestedOpen }) {
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
-                <BiPaint className="text-base" />
-                <div>From template gallery</div>
+                <BsGlobeAmericas className="text-base" />
+                <span className="text-sm ">Publish to Web</span>
               </div>
             </a>
           </div>
@@ -45,4 +44,4 @@ function FileNestedMenu({ isFileNestedOpen }) {
   );
 }
 
-export default FileNestedMenu;
+export default ShareNestedMenu;
