@@ -188,14 +188,14 @@ function Header() {
           </button>
         </div>
         {/* Editing mode  and hide menu */}
-        <div className="xs:flex sm:flex hidden  items-center py-1 ml-12">
+        <div className=" sm:flex hidden  items-center py-1 mr-4">
           <button className="flex gap-4 items-center hover:bg-gray-200 px-1 py-1 rounded-lg">
             <MdModeEditOutline />
             <IoMdArrowDropdown className="sm" />
           </button>
           {/* vertical line */}
           <div class="h-6 bg-gray-900 border-l-2 border-1   "> </div>
-          <RiArrowUpSLine className="ml-6" />
+          <RiArrowUpSLine className="ml-2" />
         </div>
       </div>
     </div>

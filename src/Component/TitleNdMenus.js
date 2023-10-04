@@ -115,6 +115,7 @@ function TitleNdMenus() {
     setIsEditOpen(false);
     setIsViewOpen(false);
     setIsInsertOpen(false);
+    setIsFormatOpen(false);
     setIsToolsOpen(false);
     setIsExtensionsOpen(false);
     setIsHelpOpen(false);

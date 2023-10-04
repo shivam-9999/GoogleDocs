@@ -11,17 +11,6 @@ function EditMenu({ isEditOpen, toggleEditDropdown }) {
   const toggleNestedEditDropdown = useCallback(() => {
     setisEditNestedOpen((previsEditNestedOpen) => !previsEditNestedOpen);
   }, []);
-  // Nested Edit handler
-  const handleEditMouseEnter = () => {
-    if (!isEditNestedOpen) {
-      toggleNestedEditDropdown();
-    }
-  };
-  const handleEditMouseLeave = () => {
-    if (isEditNestedOpen) {
-      toggleNestedEditDropdown();
-    }
-  };
 
   return (
     <div className="relative inline-block;">
@@ -34,8 +23,6 @@ function EditMenu({ isEditOpen, toggleEditDropdown }) {
         Edit
       </button>
       <EditMenuBar
-        handleEditMouseEnter={handleEditMouseEnter}
-        handleEditMouseLeave={handleEditMouseLeave}
         isEditOpen={isEditOpen}
         isEditNestedOpen={isEditNestedOpen}
       />

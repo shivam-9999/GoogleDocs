@@ -2,21 +2,23 @@ import React, { useState, useCallback } from "react";
 import ViewMenuBar from "../DropdownMenus/ViewDropDownMenu/ViewMenuBar";
 
 function ViewMenu({ isViewOpen, toggleViewDropdown }) {
-  const [isViewNestedOpen, setisViewNestedOpen] = useState(false);
+  const [isViewNestedModeOpen, setisViewNestedModeOpen] = useState(false);
 
   //toggle Nested View Dropdown
-  const toggleNestedViewDropdown = useCallback(() => {
-    setisViewNestedOpen((previsViewNestedOpen) => !previsViewNestedOpen);
+  const toggleNestedModeDropdown = useCallback(() => {
+    setisViewNestedModeOpen(
+      (previsViewNestedModeOpen) => !previsViewNestedModeOpen
+    );
   }, []);
-  // Nested View handler
-  const handleViewMouseEnter = () => {
-    if (!isViewNestedOpen) {
-      toggleNestedViewDropdown();
+  // Nested Mode handler
+  const handleModeMouseEnter = () => {
+    if (!isViewNestedModeOpen) {
+      toggleNestedModeDropdown();
     }
   };
-  const handleViewMouseLeave = () => {
-    if (isViewNestedOpen) {
-      toggleNestedViewDropdown();
+  const handleModeMouseLeave = () => {
+    if (isViewNestedModeOpen) {
+      toggleNestedModeDropdown();
     }
   };
 
@@ -31,10 +33,10 @@ function ViewMenu({ isViewOpen, toggleViewDropdown }) {
         View
       </button>
       <ViewMenuBar
-        handleViewMouseEnter={handleViewMouseEnter}
-        handleViewMouseLeave={handleViewMouseLeave}
+        handleModeMouseEnter={handleModeMouseEnter}
+        handleModeMouseLeave={handleModeMouseLeave}
         isViewOpen={isViewOpen}
-        isViewNestedOpen={isViewNestedOpen}
+        isViewNestedModeOpen={isViewNestedModeOpen}
       />
     </div>
   );

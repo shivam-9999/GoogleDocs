@@ -11,9 +11,9 @@ import ViewNestedMenu from "./ViewNestedDDM/ViewNestedMenu";
 
 function ViewMenuBar({
   isViewOpen,
-  isViewNestedOpen,
-  handleViewMouseEnter,
-  handleViewMouseLeave,
+  isViewNestedModeOpen,
+  handleModeMouseEnter,
+  handleModeMouseLeave,
 }) {
   return (
     <div>
@@ -28,8 +28,8 @@ function ViewMenuBar({
           >
             {/*Dropdown :- Mode bar */}
             <li
-              onMouseEnter={handleViewMouseEnter}
-              onMouseLeave={handleViewMouseLeave}
+              onMouseEnter={handleModeMouseEnter}
+              onMouseLeave={handleModeMouseLeave}
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -45,7 +45,7 @@ function ViewMenuBar({
 
                 {/* Nested Dropdown  */}
               </div>
-              <ViewNestedMenu isViewNestedOpen={isViewNestedOpen} />
+              <ViewNestedMenu isViewNestedModeOpen={isViewNestedModeOpen} />
             </li>
             {/*Dropdown :- Show print layout */}
             <li

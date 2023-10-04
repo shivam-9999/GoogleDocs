@@ -8,12 +8,7 @@ import { RiFileCopyLine, RiDeleteBin6Line } from "react-icons/ri";
 import { PiSelectionAll } from "react-icons/pi";
 import EditNestedMenu from "./EditNestedDDM/EditNestedMenu";
 
-function EditMenuBar({
-  isEditOpen,
-  isEditNestedOpen,
-  handleEditMouseEnter,
-  handleEditMouseLeave,
-}) {
+function EditMenuBar({ isEditOpen, isEditNestedOpen }) {
   return (
     <div>
       {" "}
@@ -27,8 +22,6 @@ function EditMenuBar({
           >
             {/*Dropdown :- Undo bar */}
             <li
-              onMouseEnter={handleEditMouseEnter}
-              onMouseLeave={handleEditMouseLeave}
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -37,14 +30,9 @@ function EditMenuBar({
                   <LuUndo2 className="text-sm" />
                   <span className="text-sm ">Undo</span>
                 </div>
-                <BiSolidRightArrow
-                  className="text-gray-400"
-                  style={{ fontSize: "10px" }}
-                />
 
                 {/* Nested Dropdown  */}
               </div>
-              <EditNestedMenu isEditNestedOpen={isEditNestedOpen} />
             </li>
 
             {/*Dropdown :- Redo bar */}
