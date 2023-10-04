@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { AiOutlineStar } from "react-icons/ai";
 import { RiFolderTransferLine } from "react-icons/ri";
 import { BsCloudCheck } from "react-icons/bs";
-import FileMenu from "./FileMenu";
-import EditMenu from "./EditMenu";
-import ViewMenu from "./ViewMenu";
-import InsertMenu from "./InsertMenu";
-import FormatMenu from "./FormatMenu";
-import ToolsMenu from "./ToolsMenu";
-import HelpMenu from "./HelpMenu";
-import ExtensionsMenu from "./ExtensionsMenu";
+import FileMenu from "./Menus/FileMenu";
+import EditMenu from "./Menus/EditMenu";
+import ViewMenu from "./Menus/ViewMenu";
+import InsertMenu from "./Menus/InsertMenu";
+import FormatMenu from "./Menus/FormatMenu";
+import ToolsMenu from "./Menus/ToolsMenu";
+import HelpMenu from "./Menus/HelpMenu";
+import ExtensionsMenu from "./Menus/ExtensionsMenu";
 
 function TitleNdMenus() {
   const [isFileOpen, setIsFileOpen] = useState(false);

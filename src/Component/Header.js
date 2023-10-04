@@ -55,6 +55,7 @@ function Header() {
           {/* title and menu*/}
           <TitleNdMenus />
         </div>
+        {/* History video call and share*/}
         <div className="flex gap-6 items-center mr-14">
           <GiBackwardTime className="text-2xl" />
           <MdOutlineMessage className="text-2xl" />
