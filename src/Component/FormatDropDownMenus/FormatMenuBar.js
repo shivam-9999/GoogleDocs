@@ -24,7 +24,7 @@ function FormatMenuBar({
     <div>
       {" "}
       {isFormatOpen && (
-        <div className="origin-top-right  absolute w-80 rounded-md shadow-lg bg-white shadow-slate-300">
+        <div className="origin-top-right  absolute w-80 rounded-md shadow-lg bg-zinc-50 shadow-slate-300">
           <ul
             className="py-1 relative"
             role="menu"

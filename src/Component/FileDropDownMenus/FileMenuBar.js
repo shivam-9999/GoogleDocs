@@ -44,7 +44,7 @@ function FileMenuBar({
     <div>
       {" "}
       {isFileOpen && (
-        <div className="origin-top-right  absolute w-80 rounded-md shadow-lg bg-white shadow-slate-300">
+        <div className="origin-top-right  absolute w-80 rounded-md shadow-lg  bg-zinc-50 shadow-gray-400">
           <ul
             className="py-1 relative"
             role="menu"
@@ -55,7 +55,7 @@ function FileMenuBar({
             <li
               onMouseEnter={handleFileMouseEnter}
               onMouseLeave={handleFileMouseLeave}
-              className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
+              className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100 "
               role="menuitem"
             >
               <div className="flex gap-2 justify-between items-center ">
