@@ -5,23 +5,24 @@ import { MdOutlineFileCopy } from "react-icons/md";
 import ExtensionsMenuBar from "../DropdownMenus/ExtensionsDropDownMenus/ExtensionsMenuBar";
 
 function ExtensionsMenu({ isExtensionsOpen, toggleExtensionsDropdown }) {
-  const [isExtensionsNestedOpen, setisExtensionsNestedOpen] = useState(false);
+  const [isExtensionsNestedAddOnesOpen, setisExtensionsNestedAddOnesOpen] =
+    useState(false);
 
   //toggle Nested Extensions Dropdown
-  const toggleNestedExtensionsDropdown = useCallback(() => {
-    setisExtensionsNestedOpen(
-      (previsExtensionsNestedOpen) => !previsExtensionsNestedOpen
+  const toggleNestedAddOnesDropdown = useCallback(() => {
+    setisExtensionsNestedAddOnesOpen(
+      (previsExtensionsNestedAddOnesOpen) => !previsExtensionsNestedAddOnesOpen
     );
   }, []);
-  // Nested Extensions handler
-  const handleExtensionsMouseEnter = () => {
-    if (!isExtensionsNestedOpen) {
-      toggleNestedExtensionsDropdown();
+  // Nested AddOnes handler
+  const handleAddOnesMouseEnter = () => {
+    if (!isExtensionsNestedAddOnesOpen) {
+      toggleNestedAddOnesDropdown();
     }
   };
-  const handleExtensionsMouseLeave = () => {
-    if (isExtensionsNestedOpen) {
-      toggleNestedExtensionsDropdown();
+  const handleAddOnesMouseLeave = () => {
+    if (isExtensionsNestedAddOnesOpen) {
+      toggleNestedAddOnesDropdown();
     }
   };
 
@@ -36,10 +37,10 @@ function ExtensionsMenu({ isExtensionsOpen, toggleExtensionsDropdown }) {
         Extensions
       </button>
       <ExtensionsMenuBar
-        handleExtensionsMouseEnter={handleExtensionsMouseEnter}
-        handleExtensionsMouseLeave={handleExtensionsMouseLeave}
+        handleAddOnesMouseEnter={handleAddOnesMouseEnter}
+        handleAddOnesMouseLeave={handleAddOnesMouseLeave}
         isExtensionsOpen={isExtensionsOpen}
-        isExtensionsNestedOpen={isExtensionsNestedOpen}
+        isExtensionsNestedAddOnesOpen={isExtensionsNestedAddOnesOpen}
       />
     </div>
   );

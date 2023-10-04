@@ -5,9 +5,9 @@ import ToolsNestedMenu from "./ToolsNestedDDM/ToolsNestedMenu";
 
 function ToolsMenuBar({
   isToolsOpen,
-  isToolsNestedOpen,
-  handleToolsMouseEnter,
-  handleToolsMouseLeave,
+  isSpellingNGrammerNestedOpen,
+  handleSpellingNGrammerMouseEnter,
+  handleSpellingNGrammerMouseLeave,
 }) {
   return (
     <div>
@@ -22,8 +22,8 @@ function ToolsMenuBar({
           >
             {/*Dropdown :- New bar */}
             <a
-              onMouseEnter={handleToolsMouseEnter}
-              onMouseLeave={handleToolsMouseLeave}
+              onMouseEnter={handleSpellingNGrammerMouseEnter}
+              onMouseLeave={handleSpellingNGrammerMouseLeave}
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -39,7 +39,9 @@ function ToolsMenuBar({
 
                 {/* Nested Dropdown  */}
               </div>
-              <ToolsNestedMenu isToolsNestedOpen={isToolsNestedOpen} />
+              <ToolsNestedMenu
+                isSpellingNGrammerNestedOpen={isSpellingNGrammerNestedOpen}
+              />
             </a>
             {/*Dropdown :- Spelling and Grammer bar */}
             <a

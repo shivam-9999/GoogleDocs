@@ -3,12 +3,7 @@ import { BiSolidRightArrow } from "react-icons/bi";
 
 import HelpNestedMenu from "./HelpNestedDDM/HelpNestedMenu";
 
-function HelpMenuBar({
-  isHelpOpen,
-  isHelpNestedOpen,
-  handleHelpMouseEnter,
-  handleHelpMouseLeave,
-}) {
+function HelpMenuBar({ isHelpOpen, isHelpNestedOpen }) {
   return (
     <div>
       {" "}
@@ -23,15 +18,13 @@ function HelpMenuBar({
             <hr className="my-2 border-gray-200"></hr>
             {/*Dropdown :- New bar */}
             <a
-              onMouseEnter={handleHelpMouseEnter}
-              onMouseLeave={handleHelpMouseLeave}
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 justify-between items-center ">
                 <div className="flex  gap-2">
                   {/* <BsFillHelpTextFill className="text-base" /> */}
-                  <span className="text-sm ">New</span>
+                  <span className="text-sm ">Search the menus</span>
                 </div>
                 <BiSolidRightArrow
                   className="text-gray-400"
@@ -40,7 +33,6 @@ function HelpMenuBar({
 
                 {/* Nested Dropdown  */}
               </div>
-              <HelpNestedMenu isHelpNestedOpen={isHelpNestedOpen} />
             </a>
             {/*Dropdown :- Help bar */}
             <a

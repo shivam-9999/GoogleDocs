@@ -5,9 +5,9 @@ import ExtensionsNestedMenu from "./ExtensionNestedDDM/ExtensionsNestedMenu";
 
 function ExtensionsMenuBar({
   isExtensionsOpen,
-  isExtensionsNestedOpen,
-  handleExtensionsMouseEnter,
-  handleExtensionsMouseLeave,
+  isExtensionsNestedAddOnesOpen,
+  handleAddOnesMouseEnter,
+  handleAddOnesMouseLeave,
 }) {
   return (
     <div>
@@ -22,8 +22,8 @@ function ExtensionsMenuBar({
           >
             {/*Dropdown :- Add ones */}
             <a
-              onMouseEnter={handleExtensionsMouseEnter}
-              onMouseLeave={handleExtensionsMouseLeave}
+              onMouseEnter={handleAddOnesMouseEnter}
+              onMouseLeave={handleAddOnesMouseLeave}
               className="block  px-3 py-1 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
@@ -40,7 +40,7 @@ function ExtensionsMenuBar({
                 {/* Nested Dropdown  */}
               </div>
               <ExtensionsNestedMenu
-                isExtensionsNestedOpen={isExtensionsNestedOpen}
+                isExtensionsNestedAddOnesOpen={isExtensionsNestedAddOnesOpen}
               />
             </a>
             {/*Dropdown :- Add Script */}

@@ -5,21 +5,24 @@ import { MdOutlineFileCopy } from "react-icons/md";
 import ToolsMenuBar from "../DropdownMenus/ToolsDropDownMenus/ToolsMenuBar";
 
 function ToolsMenu({ isToolsOpen, toggleToolsDropdown }) {
-  const [isToolsNestedOpen, setisToolsNestedOpen] = useState(false);
+  const [isSpellingNGrammerNestedOpen, setisSpellingNGrammerNestedOpen] =
+    useState(false);
 
-  //toggle Nested Tools Dropdown
-  const toggleNestedToolsDropdown = useCallback(() => {
-    setisToolsNestedOpen((previsToolsNestedOpen) => !previsToolsNestedOpen);
+  //toggle NestedSpellingNGrammer Dropdown
+  const toggleNestedSpellingNGrammerDropdown = useCallback(() => {
+    setisSpellingNGrammerNestedOpen(
+      (previsSpellingNGrammerNestedOpen) => !previsSpellingNGrammerNestedOpen
+    );
   }, []);
-  // Nested Tools handler
-  const handleToolsMouseEnter = () => {
-    if (!isToolsNestedOpen) {
-      toggleNestedToolsDropdown();
+  // NestedSpellingNGrammer handler
+  const handleSpellingNGrammerMouseEnter = () => {
+    if (!isSpellingNGrammerNestedOpen) {
+      toggleNestedSpellingNGrammerDropdown();
     }
   };
-  const handleToolsMouseLeave = () => {
-    if (isToolsNestedOpen) {
-      toggleNestedToolsDropdown();
+  const handleSpellingNGrammerMouseLeave = () => {
+    if (isSpellingNGrammerNestedOpen) {
+      toggleNestedSpellingNGrammerDropdown();
     }
   };
 
@@ -34,10 +37,10 @@ function ToolsMenu({ isToolsOpen, toggleToolsDropdown }) {
         Tools
       </button>
       <ToolsMenuBar
-        handleToolsMouseEnter={handleToolsMouseEnter}
-        handleToolsMouseLeave={handleToolsMouseLeave}
+        handleSpellingNGrammerMouseEnter={handleSpellingNGrammerMouseEnter}
+        handleSpellingNGrammerMouseLeave={handleSpellingNGrammerMouseLeave}
         isToolsOpen={isToolsOpen}
-        isToolsNestedOpen={isToolsNestedOpen}
+        isSpellingNGrammerNestedOpen={isSpellingNGrammerNestedOpen}
       />
     </div>
   );

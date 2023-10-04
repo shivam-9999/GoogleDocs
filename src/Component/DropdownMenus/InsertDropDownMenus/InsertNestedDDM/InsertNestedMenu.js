@@ -16,24 +16,55 @@ function InsertNestedMenu({ isInsertNestedOpen }) {
             aria-orientation="vertical"
             aria-labelledby="options-menu"
           >
-            {/*NestedDropdown :- Document*/}
+            {/*NestedDropdown :- Upload from Computer*/}
             <li
               className="block   px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center  ">
-                <BsFillFileTextFill className="text-base text-blue-500" />
-                <div>Document</div>
+                {/* <BsFillFileTextFill className="text-base text-blue-500" /> */}
+                <div>Upload from Computer</div>
               </div>
             </li>
-            {/*NestedDropdown :- From template gallery*/}
+            {/*NestedDropdown :- Search the web*/}
             <li
               className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
-                <BiPaint className="text-base" />
-                <div>From template gallery</div>
+                {/* <BiPaint className="text-base" /> */}
+                <div>Search the web</div>
+              </div>
+            </li>
+            <hr className="my-2 border-gray-200" />
+            {/*NestedDropdown :- Drive*/}
+            <li
+              className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
+              role="menuitem"
+            >
+              <div className="flex gap-2 items-center ">
+                {/* <BiPaint className="text-base" /> */}
+                <div>Drive</div>
+              </div>
+            </li>
+            {/*NestedDropdown :- By Url*/}
+            <li
+              className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
+              role="menuitem"
+            >
+              <div className="flex gap-2 items-center ">
+                {/* <BiPaint className="text-base" /> */}
+                <div>By Url</div>
+              </div>
+            </li>
+            {/*NestedDropdown :- Camera*/}
+            <li
+              className="block  px-3 py-2 mt-1 text-sm  text-gray-800  hover:bg-gray-100"
+              role="menuitem"
+            >
+              <div className="flex gap-2 items-center ">
+                {/* <BiPaint className="text-base" /> */}
+                <div>Camera</div>
               </div>
             </li>
           </ul>
