@@ -19,7 +19,6 @@ function FormatMenuBar({
   handleFormatMouseEnter,
   handleFormatMouseLeave,
 }) {
-  console.log(isFormatOpen);
   return (
     <div>
       {" "}

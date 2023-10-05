@@ -237,7 +237,7 @@ function FileMenuBar({
               role="menuitem"
             >
               <div className="flex gap-2 items-center ">
-                <liiOutlineFileText className="text-base" />
+                {/* <liiOutlineFileText className="text-base" /> */}
                 <span className="text-sm ">Page Setup </span>
               </div>
             </li>

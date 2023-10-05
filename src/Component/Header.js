@@ -103,7 +103,7 @@ function Header() {
             <IoMdArrowDropdown className="sm" />
           </button>
           {/* vertical line */}
-          <div class="h-6 bg-gray-900 border-l-2 border-1   "></div>
+          <div className="h-6 bg-gray-900 border-l-2 border-1   "></div>
           {/* Normal Text */}
           <button className="flex gap-2 items-center hover:bg-gray-200 px-1 py-1 rounded-lg">
             <span className="text-sm">Normal Text</span>
@@ -116,7 +116,7 @@ function Header() {
             <IoMdArrowDropdown className="sm" />
           </button>
           {/* vertical line */}
-          <div class="h-6 bg-gray-900 border-l-2 border-1   "></div>
+          <div className="h-6 bg-gray-900 border-l-2 border-1   "></div>
           <div>
             {" "}
             <button className=" hover:bg-gray-300 text-white   px-2 rounded-lg">
@@ -127,7 +127,7 @@ function Header() {
               +
             </button>
           </div>
-          <div class="h-6 bg-gray-900 border-l-2 border-1   "></div>
+          <div className="h-6 bg-gray-900 border-l-2 border-1   "></div>
         </div>
         {/* Bold to ->  Clear Formatting  */}
         <div className="flex   items-center gap-1 py-1 ml-2">
@@ -144,7 +144,7 @@ function Header() {
             <BiSolidPencil />
           </button>
           {/* vertical line */}
-          <div class="h-6 bg-gray-900 border-l-2 border-1   "></div>
+          <div className="h-6 bg-gray-900 border-l-2 border-1   "></div>
           {/* link comment image  */}
           <button className=" hover:bg-gray-200 px-1 py-1 text-lg  rounded-lg">
             <MdLink />
@@ -156,7 +156,7 @@ function Header() {
             <BiImageAlt />
           </button>
           {/* vertical line */}
-          <div class="h-6 bg-gray-900 border-l-2 border-1   "></div>
+          <div className="h-6 bg-gray-900 border-l-2 border-1   "></div>
           <button className="flex gap-1 items-center hover:bg-gray-200 px-1 py-1 rounded-lg">
             <BiAlignLeft />
             <IoMdArrowDropdown className="sm" />
@@ -194,7 +194,7 @@ function Header() {
             <IoMdArrowDropdown className="sm" />
           </button>
           {/* vertical line */}
-          <div class="h-6 bg-gray-900 border-l-2 border-1   "> </div>
+          <div className="h-6 bg-gray-900 border-l-2 border-1   "> </div>
           <RiArrowUpSLine className="ml-2" />
         </div>
       </div>
