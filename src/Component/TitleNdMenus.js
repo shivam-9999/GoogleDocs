@@ -124,10 +124,10 @@ function TitleNdMenus() {
   return (
     <div>
       {" "}
-      <div className="flex flex-col ">
+      <div className="flex menu flex-col ">
         {/* title */}
 
-        <div className="flex font-semibold gap-2 text-lg mt-2 leading-6">
+        <div className="flex  font-semibold gap-2 text-lg mt-2 leading-6">
           <button className="mr-3 ml-3 text-lg font-medium items-center ">
             Untitled document
           </button>
@@ -140,7 +140,7 @@ function TitleNdMenus() {
 
         {/* menu */}
         <div
-          className="menu flex gap-0 ml-1 font-medium "
+          className="  flex gap-0 ml-1 font-medium "
           onMouseLeave={closeMenus}
         >
           {/* File  */}
